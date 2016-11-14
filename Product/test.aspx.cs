@@ -18,7 +18,7 @@ namespace product
         {
             string prentId = HttpContext.Current.Request.Form["ParentID"];
 
-
+            //
 
             //总仓
             string partRights = isPartcode();//当前角色
