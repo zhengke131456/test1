@@ -1,0 +1,73 @@
+﻿ #menu
+        {
+            border-right: #516877 3px solid;
+            background: #f3f7f9;
+            float: left;
+            width: 197px;
+            height: 750px;
+        }
+        /*==================一级目录===================*/
+        #nav li a
+        {
+            padding-left: 60px;
+            display: block;
+        }
+        #nav li
+        {
+            width: 197px;
+            background: #D2DEE5 url(../images/dot_blue.gif) 40px 10px no-repeat;
+            font-size: 14px;
+            line-height: 29px;
+            border-bottom: 1px solid #fff;
+            float: left;
+        }
+        #nav li a:hover
+        {
+            background: #516877 url(../images/dot_white.gif) 40px 10px no-repeat;
+            color: #FFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /*==================二级目录===================*/
+        #nav li ul a
+        {
+            padding-left: 75px;
+            display: block;
+        }
+        #nav li ul a
+        {
+            background: #E7EDF1 url(../images/dot_blue0.gif) 55px 10px no-repeat;
+            line-height: 26px;
+            font-size: 12px;
+        }
+        #nav li ul a:hover
+        {
+            background: #516877 url(../images/dot_white0.gif) 55px 10px no-repeat;
+        }
+        #nav ul.collapsed
+        {
+            display: none;
+        }
+        /*==================三级目录===================*/
+        #nav li ul li ul a
+        {
+            padding-left: 85px;
+            display: block;
+        }
+        #nav li ul li ul a
+        {
+            background: #E7EDF1 url(../images/down.gif) 55px 10px no-repeat;
+            line-height: 26px;
+            font-size: 12px;
+        }
+        #nav li ul li ul a:hover
+        {
+            background: #516877 url(../images/dot_white0.gif) 55px 10px no-repeat;
+        }
+        #nav ul.collapsed
+        {
+            display: none;
+        }
+        .listyl
+        {
+        }

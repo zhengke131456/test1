@@ -1,0 +1,889 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+body
+{
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #2B4A61;
+	line-height: 18px;
+	overflow-x: hidden;
+}
+table
+{
+	border-collapse: collapse;
+	empty-cells: show;
+	font-size: 12px;
+}
+ul
+{
+	list-style-type: none;
+}
+a
+{
+	color: #2B4A61;
+	text-decoration: none;
+}
+a:hover
+{
+	text-decoration: underline;
+}
+a img
+{
+	border: 0;
+}
+input, select
+{
+	font-size: 12px;
+	vertical-align: middle;
+    height: 20px;
+}
+#code
+{
+    height: 18px;
+    width: 155px; 
+ }
+#btn
+{
+    height: 23px;
+    width: 50px
+    }
+#gopage
+{
+    font-size: 12px;
+	vertical-align: middle;
+    height: 18px;
+    width: 25px;
+    }
+#gopage1
+{
+    font-size: 12px;
+	vertical-align: middle;
+    height: 18px;
+    width: 25px;
+    }
+
+.left
+{
+	float: left;
+}
+.right
+{
+	float: right;
+}
+.alignl
+{
+	text-align: left;
+}
+.alignr
+{
+	text-align: right;
+}
+.marl15
+{
+	margin-left: 15px;
+}
+.clear
+{
+	clear: both;
+}
+.linet
+{
+	border-top: 1px dashed #C1C1C1;
+}
+.grayq
+{
+	color: #999;
+}
+.grayq a
+{
+	color: #999;
+	text-decoration: underline;
+}
+.orange
+{
+	color: #CC0033;
+}
+.orange a
+{
+	color: #CC0033;
+	text-decoration: underline;
+}
+
+/* layout
+------------------------------------------------------------------*/
+#head
+{
+	height: 64px;
+	background: url(/sjy/images/admini/head_bk.gif);
+	border-bottom: 3px solid #516877;
+}
+#head h1
+{
+	background: url("/sjy/images/admini/head_name.gif") repeat scroll 0 0 transparent;
+	height: 64px;
+	width: 398px;
+	text-indent: -9999px;
+	float: left;
+}
+#head p
+{
+	height: 28px;
+	font-size: 12px;
+	line-height: 28px;
+	color: #fff;
+	background: url(/sjy/images/admini/head_right.gif);
+	padding: 0 10px;
+	float: right;
+}
+#head p a
+{
+	color: #fff;
+}
+.subnav
+{
+	width: 100%;
+	line-height: 22px;
+	background: #F3F7F9;
+	padding-left: 10px;
+	float: left;
+}
+#right
+{
+	width: 96%;
+	padding: 2px 2px;
+	float: left;
+}
+#right .search
+{
+	line-height: 30px;
+	background: #F3F7F9;
+	border-top: 1px solid #C4D3DD;
+	padding-right: 5px;
+	margin-bottom: 10px;
+	_height: 25px;
+	_line-height: 20px;
+	_padding-top: 5px;
+}
+#right .search
+{
+}
+#right .title
+{
+	padding-left: 5px;
+	font-size: 14px;
+	display: inline;
+}
+#list
+{
+	color: #000;
+	_margin-bottom: 10px;
+}
+#list a
+{
+	text-decoration: underline;
+}
+#right table a:hover
+{
+	text-decoration: none;
+}
+#list td
+{
+	border: 1px solid #C0CFD9;
+	text-align: center;
+	padding: 3px;
+}
+#list th
+{
+	border: 1px solid #C0CFD9;
+	background: #F3F7F9;
+	text-align: center;
+	padding: 3px;
+}
+#add
+{
+	margin: 10px 0px;
+	color: #000;
+	line-height: 25px;
+	border-top: 1px dashed #C1C1C1;
+	border-bottom: 1px dashed #C1C1C1;
+}
+#add td
+{
+	padding: 5px;
+}
+#add th
+{
+	text-align: right;
+	padding: 5px;
+	font-weight: normal;
+	vertical-align: top;
+}
+#add img
+{
+	vertical-align: middle;
+}
+#right .page
+{
+	overflow: hidden;
+	line-height: 30px;
+	background: #F3F7F9;
+	padding: 0 5px;
+	margin-top: 2px;
+	_padding-top: 5px;
+}
+
+.example
+{
+	width: 100%;
+	height: auto;
+	overflow: auto;
+}
+/* Moz */
+* html .example
+{
+	width: 100%;
+	height: auto;
+	overflow: auto;
+}
+/* IE6 */
+* + html .example
+{
+	width: auto;
+	height: auto;
+	overflow: auto;
+}
+/* IE7 */
+#foot
+{
+	height: 30px;
+	background: #516877;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #fff;
+	padding-top: 5px;
+	clear: both;
+}
+
+#list0 a
+{
+	text-decoration: underline;
+}
+#right table a:hover
+{
+	text-decoration: none;
+}
+#list0 td
+{
+	border: 1px solid #C0CFD9;
+	border-top: none;
+	text-align: center;
+	padding: 3px;
+}
+
+#login
+{
+	width: 100%;
+	margin-top: 195px;
+}
+#login h1
+{
+	height: 55px;
+	width: 366px;
+	margin-left: 290px;
+	text-indent: -9999px;
+}
+#login .content
+{
+	width: 100%;
+	margin-top: 10px;
+	background: #B5C6D2 url(/sjy/images/admini/login_16.gif) left top repeat-y;
+	float: left;
+}
+#login .content ul
+{
+	height: 85px;
+	padding: 15px 0 10px 337px;
+	background: url(/sjy/images/admini/login_09.gif) 270px center no-repeat;
+}
+#login .content li
+{
+	line-height: 24px;
+	height: 24px;
+	color: #2B4A61;
+}
+#login .logintext
+{
+	height: 17px;
+	border: 1px solid #516877;
+	background: #F5FAFF;
+}
+#login .content a
+{
+	color: #2B4A61;
+	text-decoration: underline;
+}
+#login .content a:hover
+{
+	text-decoration: none;
+}
+/*hdm*/
+.hdm ul
+{
+	width: 100%;
+	line-height: 20px;
+	height: 21px;
+	border-bottom: 2px solid #516877;
+	margin-bottom: 10px;
+}
+.hdm li
+{
+	text-align: center;
+	cursor: pointer;
+	margin-right: 10px;
+	line-height: 20px;
+}
+.hdm .option2
+{
+	float: left;
+	width: 150px;
+	background: #F3F7F9;
+	border: 1px solid #C0CFD9;
+	border-bottom: 0px;
+}
+.hdm .option1
+{
+	float: left;
+	width: 150px;
+	background: #516877;
+	border: 1px solid #516877;
+	border-botttom: 0px;
+	color: #fff;
+}
+
+.tanchu
+{
+	width: 350px;
+	border: 1px solid #516877;
+	margin: 10px auto;
+	background: #F3F7F9;
+}
+.tanchu h1
+{
+	width: 330px;
+	font-size: 12px;
+	line-height: 24px;
+	padding-left: 20px;
+	background: #516877 url(/sjy/images/admini/dot_white.gif) 10px center no-repeat;
+	color: #fff;
+	float: left;
+}
+.tanchu .close
+{
+	float: right;
+	padding: 5px;
+}
+.tanchu td
+{
+	padding: 5px;
+	font-family: "宋体";
+}
+/*map*/
+#subway
+{
+	width: 100%;
+	float: left;
+}
+#subway .map
+{
+	margin: 0 300px 0 0;
+	height: auto;
+}
+#subway .mright
+{
+	width: 288px;
+	float: right;
+	line-height: 26px;
+	border: 1px solid #C4D3DD;
+}
+#subway .mright h2
+{
+	height: 25px;
+	line-height: 25px;
+	font-size: 14px;
+	padding-left: 10px;
+	background: #C4D3DD;
+}
+#subway .mright .num
+{
+	font-size: 12px;
+	font-weight: normal;
+	padding-left: 5px;
+	color: #CC0033;
+}
+#subway .mright li
+{
+	width: 280px;
+	padding: 5px 0 5px 5px;
+	line-height: 22px;
+	float: left;
+	border-bottom: 1px dashed #d0d0d0;
+}
+#subway .mright .pages
+{
+	width: 280px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	float: left;
+}
+
+#mapmask
+{
+	width: 100%;
+	float: left;
+}
+#mapmask .map
+{
+	margin: 0 250px 0 0;
+	height: auto;
+}
+#mapmask .mright
+{
+	width: 240px;
+	float: right;
+	line-height: 26px;
+	border: 1px solid #C4D3DD;
+}
+#mapmask .mright h2
+{
+	height: 25px;
+	line-height: 25px;
+	font-size: 14px;
+	padding-left: 10px;
+	background: #C4D3DD;
+}
+#mapmask .mright .num
+{
+	font-size: 12px;
+	font-weight: normal;
+	padding-left: 5px;
+	color: #CC0033;
+}
+#mapmask .mright ul
+{
+	padding: 8px;
+	float: left;
+}
+#mapmask .mright .pages
+{
+	width: 280px;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	float: left;
+}
+
+/*shenhe*/
+.btn_up
+{
+	width: 130px;
+	height: 20px;
+	background: url(/sjy/images/admini/icon_up.gif) right center no-repeat;
+	padding-right: 10px;
+	border: none;
+	color: #2B4A61;
+	margin-right: 10px;
+	margin-top: 5px;
+	cursor: pointer;
+}
+#shenhe
+{
+	color: #000;
+	_margin-bottom: 10px;
+	line-height: 24px;
+}
+#shenhe textarea
+{
+	line-height: 18px;
+	padding: 0 3px;
+}
+#shenhe a
+{
+	text-decoration: underline;
+}
+#right table a:hover
+{
+	text-decoration: none;
+}
+#shenhe td
+{
+	border: 1px solid #C0CFD9;
+	padding: 3px;
+	padding-left: 8px;
+}
+#shenhe th
+{
+	border: 1px solid #C0CFD9;
+	background: #F3F7F9;
+	text-align: center;
+	padding: 3px;
+	vertical-align: top;
+}
+/*photoalbum 090329*/
+#photoalbum
+{
+	width: 100%;
+	margin: 10px 0;
+	line-height: 24px;
+	text-align: center;
+}
+#photoalbum li
+{
+	margin: 8px;
+	float: left;
+}
+#photoalbum li img
+{
+	padding: 5px;
+	border: 1px solid #ddd;
+}
+
+#mainbody
+{
+	width: 610px;
+	margin: 0 auto;
+	line-height: 24px;
+	text-align: center;
+}
+#mainbody li
+{
+	margin: 7px;
+	float: left;
+}
+#mainbody li img
+{
+	padding: 5px;
+	border: 1px solid #ddd;
+}
+#mainbody .pre
+{
+	width: 22px;
+	height: 100px;
+	background: url(/sjy/images/admini/pre_next.gif) left 15px no-repeat;
+}
+#mainbody .next
+{
+	width: 22px;
+	height: 100px;
+	background: url(/sjy/images/admini/pre_next.gif) left -115px no-repeat;
+}
+#photos
+{
+	width: 515px;
+	height: 120px;
+	overflow: hidden;
+}
+#showArea li
+{
+	margin: 7px;
+	float: left;
+}
+#showArea img
+{
+	padding: 5px;
+	border: 1px solid #ddd;
+	cursor: pointer;
+}
+
+/* PAGINATOR */
+.Pages
+{
+	clear: left;
+	width: 100%;
+	color: #000000;
+	font-size: 12px;
+	line-height: 20px;
+	letter-spacing: 1px;
+	text-align: right; /*padding-top: 50px;*/
+}
+
+.Paginator
+{
+	clear: both;
+	float: left;
+	text-align: right;
+	font-size: 12px;
+	padding-top: 10px;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+.Paginator a, .pageList .this-page
+{
+	margin-left: 1px;
+	margin-right: 1px;
+	padding: 2px 4px;
+	border: solid 1px #ddd;
+	background: #fff;
+	text-decoration: none;
+}
+.Paginator a:visited
+{
+	padding: 2px 4px;
+	border: solid 1px #ddd;
+	background: #fff;
+	text-decoration: none;
+	color: #8F8F8F;
+}
+.Paginator a:link
+{
+	padding: 2px 4px;
+	border: solid 1px #ddd;
+	background: #fff;
+	text-decoration: none;
+	color: #8F8F8F;
+}
+.Paginator a:hover
+{
+	color: #fff;
+	background: #0063DC;
+	border-color: #036;
+	text-decoration: none;
+}
+.Paginator .ChangePage
+{
+	margin-right: 5px;
+	margin-left: 5px;
+	padding: 2px 4px;
+	border: solid 2px #ddd;
+	background: #fff;
+}
+.Paginator .break
+{
+	padding: 2px 4px;
+	border: none;
+	background: #fff;
+	text-decoration: none;
+}
+
+.Paginator .this-page
+{
+	padding: 2px 4px;
+	border-color: #999;
+	font-weight: bold;
+	font-size: 13px;
+	vertical-align: top;
+	background: #fff;
+	color: #FB0478;
+}
+
+a.ChangePage:link
+{
+	margin-right: 5px;
+	padding: 2px 4px;
+	background: #fff;
+	color: #033FA2;
+}
+a.ChangePage:hover
+{
+	margin-right: 5px;
+	padding: 2px 4px;
+	background: #fff;
+	color: #033FA2;
+}
+a.ChangePage:visited
+{
+	margin-right: 5px;
+	padding: 2px 4px;
+	background: #fff;
+	color: #033FA2;
+}
+
+.PagesCount
+{
+	float: left;
+	height: 25px;
+	color: #000000;
+	font-size: 12px;
+	padding-left: 5px;
+	text-align: center;
+}
+.Pages_List
+{
+	float: left;
+	color: #000000;
+	font-size: 12px;
+	line-height: 28px;
+	padding-left: 5px;
+	text-align: center;
+}
+.Pages_goto
+{
+	color: #000000;
+	font-size: 12px;
+	padding-left: 5px;
+	text-align: center;
+	float: left;
+}
+
+
+.Paginator .Next
+{
+	margin-left: 20px;
+	padding: 2px 4px;
+	border: solid 2px #ddd;
+	background: #fff;
+}
+.Paginator .AtStart
+{
+	margin-right: 20px;
+	padding: 2px 4px;
+	background: #fff;
+	color: #aaa;
+}
+.Paginator .AtEnd
+{
+	margin-left: 20px;
+	padding: 2px 4px;
+	background: #fff;
+	color: #aaa;
+}
+.Pages div.Results
+{
+	text-align: center;
+	font: 11px/15px Arial, Helvetica;
+	color: #aaa;
+	margin-top: 8px;
+}
+.red
+{
+	color: #FF0000;
+}
+.pageInfo
+{
+	float: right;
+	height: 20px;
+	color: #333333;
+	text-align: right;
+}
+.counter
+{
+	color: #FF0000;
+}
+
+.gotoimg a
+{
+	padding: 0px 0px;
+	border: solid 0px;
+	background: #000;
+	text-decoration: none;
+	color: #000;
+}
+.gotoimg a:hover
+{
+	padding: 0px 0px;
+	border: 0px;
+	background: #000;
+	text-decoration: none;
+	color: #000;
+}
+
+
+/*选中效果*/
+
+.overRow
+{
+	background-color: #DDDDDD;
+	width: 10%;
+	height: 20%;
+	border: 1px solid #000000;
+	margin-top: 2px;
+}
+.focusRow
+{
+	background-color: #9999FF;
+	width: 10%;
+	height: 20%;
+	border: 1px solid #000000;
+	margin-top: 2px;
+}
+.clickRow
+{
+	background-color: #CC99FF;
+	width: 10%;
+	height: 20%;
+	border: 1px solid #000000;
+	margin-top: 2px;
+}
+.defaultClass
+{
+	background-color: #00FF00;
+}
+
+.dix
+{
+	width: 10%;
+	height: 20%;
+	border: 1px solid #000000;
+	margin-top: 2px;
+}
+
+#info_input
+{
+	border: solid 1px #ccc;
+}
+#info_input th
+{
+	text-align: center;
+	background-color: #516877;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	border: solid 1px #ddd;
+	color: white;
+}
+#info_input td
+{
+	vertical-align:middle;
+	border: solid 1px #ddd;
+	padding:5px;
+	float:left;
+}
+#info_input .left
+{
+	background-color: #f3f7f9;
+	width: 20%;
+	padding-left:30px;
+}
+.mustinput
+{
+	font-weight: normal;
+	font-size: 10px;
+}
+.infoedit
+{
+	background-color: #f3f7f9;
+}
+.imglist{margin: 0px; padding: 0px; list-style: none; width:600px}
+.imglist li{float:left;text-align:center;margin: 5px;}
+.imglist li span{ color:#2B4A61;text-decoration:underline;}
+.imglist li span:hover{color:red;cursor:pointer}
+.imglist img{ padding: 3px; border: 1px solid #ddd; }
+
+
+
+
+
+
+.jqmWindow
+{
+    left: 40%;
+    position: fixed;
+    top: 30%;
+}
+#longtw
+{
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding: 20px 45px;
+    position: fixed;
+}

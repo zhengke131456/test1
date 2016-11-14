@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>查询反馈分配 </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=IE8" />
+    <script src="../Scripts/jquery-1.4.1.js" type="text/javascript"></script>
+    <link href="../Styles/dict.css" rel="stylesheet" type="text/css" />
+    <link href="../JS/Grid/codebase/dhtmlxgrid.css" rel="stylesheet" type="text/css" />
+    <script src="../JS/Grid/codebase/dhtmlxgrid.js" type="text/javascript"></script>
+    <script>
+        var data = { rows: [{ id: 1, data: ["010", "530375_106", "北京市", "100.00", "200.00", "150.00", "130.00", "99.00"] }, { id: 3, data: ["0311", "530375_106", "石家庄市", "", "", "", "", ""] }, { id: 73, data: ["021", "530375_106", "上海市", "", "", "", "", ""]}] };
+          var myGrid; myDataProcessor;
+        function doOnLoad() {
+            myGrid = new dhtmlXGridObject('gridbox');
+            myGrid.setImagePath("../JS/Grid/codebase/imgs/");
+            myGrid.setColumnIds("citycode,CAD,城市,进货价,销售价,优惠价格1,优惠价格2,优惠价格3");
+            myGrid.setHeader("citycode,CAD,城市,进货价,销售价,优惠价格1,优惠价格2,优惠价格3");
+             myGrid.setInitWidths("10,*");
+           myGrid.setColAlign("center,center,center,left,left,left,left,left");
+           // myGrid.getCombo(5).put(2, 2);
+            myGrid.setColTypes("ed,ro,ro,ed,ed,ed,ed,ed");
+            myGrid.enableEditEvents(false, true, true);
+            myGrid.attachEvent("onEditCell", doOnCellEdit);
+            myGrid.setColSorting("str,str,str,str,str,str,str,str");
+            myGrid.setColumnMinWidth(50, 0);
+            myGrid.setStyle("background:#15A0F5; font-weight:bold;", "", "color:red;", "");
+            myGrid.init();
+            myGrid.setColumnHidden(0, true); //编码ID
+            myGrid.parse(data, function () {
+                alert(myGrid.getRowsNum());
+                for (var i = 1; i <= myGrid.getRowsNum(); i++) {
+                
+                    myGrid.setRowColor(i, "#E0EDF5");
+
+                }
+
+            }, "json");
+            // -------------------------------  
+
+
+
+            myDataProcessor = new dataProcessor("../Handler/UpdataRowPrice.ashx"); // lock feed url
+            myDataProcessor.enableDataNames(true);
+            myDataProcessor.setTransactionMode("POST", false);
+          
+            myDataProcessor.init(myGrid); // link dataprocessor to the grid
+
+            //回掉函数
+            myDataProcessor.defineAction("error", function (tag) {
+              
+                alert(tag.firstChild.nodeValue);
+                var rowid = tag.getAttribute("sid");
+                var val = document.getElementById("hiddenid").value;
+                var hiddencol = document.getElementById("hiddencol").value;
+                myGrid.cells(rowid, hiddencol).setValue(val)
+                return true;
+
+            });
+            myDataProcessor.defineAction("update", function (tag) {
+                //alert(tag.firstChild.nodeValue);
+                var rowid = tag.getAttribute("sid");
+                var colour = tag.firstChild.nodeValue;
+
+                myGrid.setRowColor(rowid, colour);
+                alert("修改成功！");
+                //	            var  colour=tag.firstChild.nodeValue;
+                //                var rowid=tag.getAttribute("ids");
+                //                var colour = myGrid.cells(rowid, 0).getValue();
+                //                   alert(colour);
+                //	                if (colour =="red") {
+                //	                    myGrid.setRowColor(rowid, "red");
+                //	                }
+                //               
+                return true;
+            });
+
+
+
+        }
+
+
+        function doOnCellEdit(stage, row, cell, newValue, oldValue) {
+
+            alert(stage);
+            if (stage == 1) {
+                var old = myGrid.cells(row, cell).getValue();
+                var ss = myGrid.getColumnLabel(cell - 1) + ',';
+                var name = ss + old;
+                myGrid.cells(row, 1).setValue(name)
+                document.getElementById("hiddencol").value = cell;
+            }
+            if (stage == 2) {
+                if (newValue != oldValue) {
+ 
+                    document.getElementById("hiddenid").value = oldValue;
+
+
+                    myDataProcessor.sendData();
+
+                }
+                else {
+                    grid1.cells(row, cell).setValue(oldValue);
+                }
+            }
+            return true;
+
+        }
+
+    </script>
+</head>
+<body onload="doOnLoad()">
+    <form method="post" action="Orderallocation.aspx?id=2&amp;batch=P201509011213&amp;ordersUser=zk"
+    id="form1">
+    <div class="aspNetHidden">
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE4NTIwMTY3NTFkZBj+WHdezDNnSJmTkyMb74oGN4Kyl/rg+Q6fZjg0yCvG" />
+    </div>
+    <div class="aspNetHidden">
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="1F02C65F" />
+        <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAKp5pdJnDpZJbSYIceC5PQl2VDEqY/n3zm5Sec4UTc3dF8oJ5CPllqhls6CYOd6yR7EA8eIzizGz6yUOHX1m7Pv" />
+    </div>
+    <div class="subnav">
+        分配管理
+    </div>
+    <div id="right">
+        <div class="page ">
+            <p class="left">
+                <p class="right">
+                    <a style="color: Red;" href="../Order/batchmanagement.aspx">返回</a> &nbsp;</p>
+                <div class="clear">
+                </div>
+                <div class="page ">
+                </div>
+        </div>
+        <div id="gridbox" style="width: 100%; height: 500px; background-color: white;">
+        </div>
+        <div class="Pages">
+            <div class="center">
+                <input type="submit" name="btnQuerey" value="全部提交" id="btnQuerey" />
+                &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="hiddenid" value="" />
+    <input type="hidden" id="hiddencol" value="" />
+    </form>
+</body>
+</html>

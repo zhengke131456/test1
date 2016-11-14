@@ -1,0 +1,11 @@
+
+body{ background:url(../images/psd660228.jpg) repeat; margin:0px; padding:0px;}
+img{ border:0px;}
+.bg_one{ background:url(../images/psd660128.jpg) no-repeat; width:500px; height:298px; margin:0px auto; position:absolute; left:50%; top:50%; margin:-140px 0px 0px -250px;}
+.contert{margin-top:180px; margin-left:120px;}
+.wzcolor{ color:#fff;}
+.mima{ margin-left:70px;}
+.chongzhi{ margin-left:15px;}
+.textbox{ margin-left:15px;}
+
+/*position:absolute; left:50%; top:50%; margin:-50px 0px 0px -50px;}*/

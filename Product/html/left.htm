@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="../Styles/dict.css" rel="stylesheet" type="text/css" />
+     <style type="text/css">
+        #menu
+        {
+            border-right: #516877 3px solid;
+            background: #f3f7f9;
+            float: left;
+            width: 197px;
+            height: 750px;
+        }
+        /*==================一级目录===================*/
+        #nav li a
+        {
+            padding-left: 60px;
+            display: block;
+        }
+        #nav li
+        {
+            width: 197px;
+            background: #D2DEE5 url(../images/dot_blue.gif) 40px 10px no-repeat;
+            font-size: 14px;
+            line-height: 29px;
+            border-bottom: 1px solid #fff;
+            float: left;
+        }
+        #nav li a:hover
+        {
+            background: #516877 url(../images/dot_white.gif) 40px 10px no-repeat;
+            color: #FFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        /*==================二级目录===================*/
+        #nav li ul a
+        {
+            padding-left: 75px;
+            display: block;
+        }
+        #nav li ul a
+        {
+            background: #E7EDF1 url(../images/dot_blue0.gif) 55px 10px no-repeat;
+            line-height: 26px;
+            font-size: 12px;
+        }
+        #nav li ul a:hover
+        {
+            background: #516877 url(../images/dot_white0.gif) 55px 10px no-repeat;
+        }
+        #nav ul.collapsed
+        {
+            display: none;
+        }
+        /*==================三级目录===================*/
+        #nav li ul li ul a
+        {
+            padding-left: 85px;
+            display: block;
+        }
+        #nav li ul li ul a
+        {
+            background: #E7EDF1 url(../images/down.gif) 55px 10px no-repeat;
+            line-height: 26px;
+            font-size: 12px;
+        }
+        #nav li ul li ul a:hover
+        {
+            background: #516877 url(../images/dot_white0.gif) 55px 10px no-repeat;
+        }
+        #nav ul.collapsed
+        {
+            display: none;
+        }
+        .listyl
+        {
+        }
+    </style>
+</head>
+<body>
+<div id="menu">
+        <ul id="nav">
+            <li class="listyl"><a href="javascript:void(0)">基础信息管理</a>
+                <ul id="Ul2" class="expanded">
+                    <li><a href="../baseinfo/baseinfoList.aspx?type=1" target="rightFrame">编码列表</a></li>
+                    <li><a href="../baseinfo/baseinfoList.aspx?type=7" target="rightFrame">CAI列表</a></li>
+                    <li><a href="../baseinfo/baseinfoList.aspx?type=2" target="rightFrame">花纹列表</a></li>
+                    <li><a href="../baseinfo/baseinfoList.aspx?type=3" target="rightFrame">型号列表</a></li>
+                    <li><a href="../baseinfo/baseinfoList.aspx?type=4" target="rightFrame">仓库列表</a></li>
+                    <li><a href="../baseinfo/baseinfoList.aspx?type=5" target="rightFrame">销售渠道列表</a></li>
+                    <li><a href="../baseinfo/baseinfoList.aspx?type=6" target="rightFrame">客户名称列表</a></li> 
+                 
+                </ul>
+            </li>
+             <li class="listyl"><a href="javascript:void(0)">产品信息管理</a>
+                <ul id="Ul1" class="expanded">
+                    <li><a href="../products/productPrice.aspx" target="rightFrame">产品价格表</a></li> 
+                    <li><a href="../products/productRebate.aspx" target="rightFrame">返利表</a></li> 
+                    <li><a href="../products/productList.aspx" target="rightFrame">产品信息列表</a></li> 
+                    <li><a href="../products/inproductList.aspx" target="rightFrame">进库信息列表</a></li> 
+                    <li><a href="../products/outproductList.aspx" target="rightFrame">出库信息列表</a></li> 
+                    <li><a href="../products/outproductList.aspx" target="rightFrame">库存管理</a></li> 
+                </ul>
+            </li> 
+             <li class="listyl"><a href="javascript:void(0)">报表</a>
+             <ul id="Ul4" class="expanded">
+                    <li><a href="../products/PriceRebateExecl.aspx" target="rightFrame">价格返利汇总表</a></li> 
+                   
+                </ul>
+             </li> 
+            <li class="listyl"><a href="javascript:void(0)">管理员管理</a>
+                <ul id="Ul3" class="expanded">
+                    <li><a href="../user/userList.aspx" target="rightFrame">管理员信息列表</a></li> 
+                     <li><a href="../user/usergroupList.aspx" target="rightFrame">用户组信息列表</a></li> 
+                </ul>
+            </li> 
+        </ul>
+    </div>
+</body>
+</html>
